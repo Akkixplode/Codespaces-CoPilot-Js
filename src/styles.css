@@ -14,6 +14,11 @@ body {
   width: 100%;
 }
 
+/* add a smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 div#main {
   display: flex;
   flex-direction: column;
@@ -122,4 +127,83 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+/* add a slide in Left animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* add an animation to the social icons */
+.socialIcon {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+/* add a slide in Right animation */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* add an animation to the nav links */
+.navLink {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+/* add a slide in Up animation */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* add an animation to the hero section */
+.hero {
+  animation: slideInUp 0.5s ease-in-out;
+}
+
+/* add a fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* add an animation to the image */
+img.socialIcon:hover {
+  animation: bounce 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
